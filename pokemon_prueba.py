@@ -13,9 +13,12 @@ with st.container():
     st.write ("---")
     st.header ("1.	¿Cuáles han sido los mejores pokemones en cada generación según sus puntos de base?")
 
-#grafico 1
-conn = sqlite3.connect(r"C:\Users\Gamer Edition i5 Xtr\Desktop\Santy\Computación - 2\bbdd\veekun-pokedex.sqlite\veekun-pokedex.sqlite")
-cur = conn.cursor ()  
+
+# Conectar bbdd 
+github_url = "https://github.com/SantyIronman/Pokemon_proyect/blob/eba941067654486f8a24090cae426557cd4172cc/veekun-pokedex.sqlite"
+conn = sqlite3.connect(github_url)
+
+cur = conn.cursor()
 
 #consulta
 cur.execute ("""
