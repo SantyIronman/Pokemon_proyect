@@ -9,13 +9,22 @@ import os
 #cagar columnas 
 st.set_page_config (page_title= "Pokemon.app", layout= "wide")
 
+#Titulo para el proyecto, Planteamiento del Problema, Objetivos, Marco Teorico
 st.title("Análisis Estadístico de Pokémon desde la Generación I, II, III, IV")
 
+st.header ("Planteamiento del Problema")
+
+st.write ("Pokémon es una de las franquicias de videojuegos y serie de anime muy famosas. El universo Pokémon está separado por generaciones, cada generación cuenta con un grupo completamente nuevo de Pokémon de diferentes tipos, donde las personas más fanáticas de esta franquicia prefieren la primera generación de Pokémon aún así viendo Pokémon mejores que la primera generación, entonces es necesario conocer las estadísticas base de los Pokémon más resaltantes para conocer sobre este mundo. ")
+
+st.header ("Objetivo")
+
+st.write ('<ul><li>Determinar el Pokémon con mayor estadística para cada base: salud, velocidad, defensa, ataque, defensa especial, ataque especial.</li><li>Identificar el Pokémon con mayor experiencia de pelea.</li><li>Determinar si el peso del Pokémon lleva a que el Pokémon tengan menor velocidad al momento de pelear.</li></ul', unsafe_allow_html= True)
 
 #Pregunta 1
 with st.container():
     st.write ("---")
     st.header ("1.	¿Cuáles han sido los Mejores Pokemones en cada Generación según sus Puntos de Base?")
+    
 
 
 # Conectar bbdd 
