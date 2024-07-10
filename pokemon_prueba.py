@@ -19,20 +19,20 @@ with st.container():
 # Conectar bbdd 
 github_url = "https://github.com/SantyIronman/Pokemon_proyect/blob/eba941067654486f8a24090cae426557cd4172cc/veekun-pokedex.sqlite?raw=true"
 
-# Download the SQLite database file from GitHub
 db_path = "veekun-pokedex.sqlite"
+
 urllib.request.urlretrieve(github_url, db_path)
 
-# Get the absolute path of the downloaded file
+
 db_abs_path = os.path.abspath(db_path)
 
-# Connect to the SQLite database
 conn = sqlite3.connect(db_abs_path)
+
 cur = conn.cursor()
 
 
 
-#consulta
+#consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de salud
 cur.execute ("""
                 SELECT identifier, type, generation, base_experience, Puntos_de_base, max (base_stat)
                 FROM limpia_bbdd
@@ -58,13 +58,15 @@ st.dataframe(df, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
 
+#consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de velocidad
+
 try:
     conn = sqlite3.connect(db_abs_path)
     cur = conn.cursor()
     cur.execute("""
                 SELECT identifier, type, generation, base_experience, Puntos_de_base, max (base_stat)
                 FROM limpia_bbdd
-                WHERE generation BETWEEN "generation-i" AND "generation-iv" AND Puntos_de_base = "attack"
+                WHERE generation BETWEEN "generation-i" AND "generation-iv" AND Puntos_de_base = "speed"
                 GROUP BY generation
                 ORDER BY max (base_stat) ASC;
                 """)
