@@ -238,9 +238,9 @@ except sqlite3.Error as e:
 finally:
     conn.close()  
 
-df_tipo_exeriencia = pd.DataFrame(result, columns=['Tipo de Pokemon', 'Pokemon', 'Experiencia', 'Color', 'Peso', 'Altura', 'Generacion'])
+df_tipo_experiencia = pd.DataFrame(result, columns=['Tipo de Pokemon', 'Pokemon', 'Experiencia', 'Color', 'Peso', 'Altura', 'Generacion'])
 
-fig = px.line(df_tipo_exeriencia, x="Tipo de Pokemon", y="Experiencia", 
+fig = px.line(df_tipo_experiencia, x="Tipo de Pokemon", y="Experiencia", 
               hover_data=["Generacion", "Tipo de Pokemon", "Pokemon"], 
               color_discrete_sequence=["#760723"])
 
@@ -258,9 +258,43 @@ fig.update_layout(
         showgrid=True  
     )
 )
-st.dataframe(df_tipo_exeriencia, width=1000, hide_index=True)
+st.dataframe(df_tipo_experiencia, width=1000, hide_index=True)
 
 st.plotly_chart(fig, use_container_width=True)
+
+# Pregunta 3
+with st.container():
+    st.write("---")
+    st.header("3.	¿Los Pokemones más pesados tienen Menor Velocidad?")
+
+try:
+    conn = sqlite3.connect(db_abs_path)
+    cur = conn.cursor()
+    cur.execute("""
+                SELECT identifier, type, generation, weight, Puntos_de_base, base_stat
+                FROM limpia_bbdd
+                WHERE generation BETWEEN 'generation-i' AND 'generation-iv' AND stat_id = "6"
+                ORDER BY base_stat, weight DESC
+                LIMIT 10;
+                """)
+    result = cur.fetchall()  
+except sqlite3.Error as e:
+    print(f"Error: {e}")
+    st.error(f"Error: {e}")
+finally:
+    conn.close()  
+
+df_peso_velocidad = pd.DataFrame(result, columns=['Pokemon', 'Tipo de Pokemon', 'Generacion', 'Peso', 'Base', 'Puntos de Base'])
+
+fig = px.bar(df_peso_velocidad.assign(Puntos_de_Base_str=df_peso_velocidad["Puntos de Base"].astype(str)), 
+             x="Pokemon", y="Peso", color="Puntos_de_Base_str", 
+             color_discrete_map={'5': '#6DC83E', '10': '#3C801A', '15': '#102C02'}, 
+             barmode="stack")
+
+st.dataframe(df_peso_velocidad, width=1000, hide_index=True)
+
+st.plotly_chart(fig, use_container_width=True)
+
 
 
 
