@@ -52,17 +52,25 @@ fig = px.bar(df, x="Generacion", y="Puntos de Base", color="Pokemon",
 
 st.dataframe(df)
 
+
+
 st.plotly_chart(fig, use_container_width=True)
 
-    
-
-cur.execute ("""
+try:
+    conn = sqlite3.connect(db_abs_path)
+    cur = conn.cursor()
+    cur.execute("""
                 SELECT identifier, type, generation, base_experience, Puntos_de_base, max (base_stat)
                 FROM limpia_bbdd
                 WHERE generation BETWEEN "generation-i" AND "generation-iv" AND Puntos_de_base = "attack"
                 GROUP BY generation
                 ORDER BY max (base_stat) ASC;
                 """)
+except sqlite3.Error as e:
+    print(f"Error: {e}")
+    st.error(f"Error: {e}")    
+
+
 result = cur.fetchall()
 
 conn.close()
