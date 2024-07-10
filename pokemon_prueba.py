@@ -151,3 +151,33 @@ st.dataframe(df_attack, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
 
+#consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de defensa-especial
+
+try:
+    conn = sqlite3.connect(db_abs_path)
+    cur = conn.cursor()
+    cur.execute("""
+                SELECT identifier, type, generation, base_experience, Puntos_de_base, max (base_stat)
+                FROM limpia_bbdd
+                WHERE generation BETWEEN "generation-i" AND "generation-iv" AND Puntos_de_base = "special-defense"
+                GROUP BY generation
+                ORDER BY max (base_stat) ASC;
+                """)
+except sqlite3.Error as e:
+    print(f"Error: {e}")
+    st.error(f"Error: {e}")    
+
+
+result = cur.fetchall()
+
+conn.close()
+
+df_special_defense = pd.DataFrame (result, columns=['Pokemon', 'Tipo de Pokemon', 'Generacion', 'Cantidad minima de experiencia','Base', 'Puntos de Base'])
+
+fig = px.bar(df_special_defense, x="Pokemon", y="Puntos de Base", color="Generacion", 
+             color_discrete_map={'generation-iv': '#2A80C3', 'generation-iii': '#4BABF5', 'generation-i': '#95D0FE', 'generation-ii': '#9FC6E5'}, 
+             barmode="stack")
+
+st.dataframe(df_special_defense, width= 1000, hide_index= True)
+
+st.plotly_chart(fig, use_container_width=True)
