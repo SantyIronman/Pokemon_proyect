@@ -79,5 +79,11 @@ conn.close()
 
 df_attack = pd.DataFrame (result, columns=['Pokemon', 'Tipo de Pokemon', 'Generacion', 'Cantidad minima de experiencia','Base', 'Puntos de Base'])
 
+fig = px.bar(df, x="Pokemon", y="Puntos de Base", color="Generacion", 
+             color_discrete_map={'generation-iv': '#2A80C3', 'generation-iii': '#4BABF5', 'generation-i': '#95D0FE', 'generation-ii': '#9FC6E5'}, 
+             barmode="stack")
+
 st.dataframe(df_attack, width= 1000, hide_index= True)
+
+st.plotly_chart(fig, use_container_width=True)
 
