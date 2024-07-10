@@ -56,5 +56,18 @@ st.plotly_chart(fig, use_container_width=True)
 
     
 
+cur.execute ("""
+                SELECT identifier, type, generation, base_experience, Puntos_de_base, max (base_stat)
+                FROM limpia_bbdd
+                WHERE generation BETWEEN "generation-i" AND "generation-iv" AND Puntos_de_base = "attack"
+                GROUP BY generation
+                ORDER BY max (base_stat) ASC;
+                """)
+result = cur.fetchall()
 
+conn.close()
+
+df_attack = pd.DataFrame (result, columns=['Pokemon', 'Tipo de Pokemon', 'Generacion', 'Cantidad minima de experiencia','Base', 'Puntos de Base'])
+
+st.dataframe(df_attack)
 
