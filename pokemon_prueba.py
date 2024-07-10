@@ -247,14 +247,17 @@ fig = px.line(df_tipo_exeriencia, x="Tipo de Pokemon", y="Experiencia",
 fig.update_layout(
     xaxis=dict(
         gridcolor='#eee',
-        gridwidth=1
+        gridwidth=1,
+        zeroline=True,  
+        showgrid=True  
     ),
     yaxis=dict(
         gridcolor='#eee',
-        gridwidth=1
+        gridwidth=1,
+        zeroline=True,  
+        showgrid=True  
     )
 )
-
 st.dataframe(df_tipo_exeriencia, width=1000, hide_index=True)
 
 st.plotly_chart(fig, use_container_width=True)
