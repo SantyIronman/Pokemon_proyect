@@ -244,6 +244,17 @@ fig = px.line(df_tipo_exeriencia, x="Tipo de Pokemon", y="Experiencia",
               hover_data=["Generacion", "Tipo de Pokemon", "Pokemon"], 
               color_discrete_sequence=["#760723"])
 
+fig.update_layout(
+    xaxis=dict(
+        gridcolor='#eee',
+        gridwidth=1
+    ),
+    yaxis=dict(
+        gridcolor='#eee',
+        gridwidth=1
+    )
+)
+
 st.dataframe(df_tipo_exeriencia, width=1000, hide_index=True)
 
 st.plotly_chart(fig, use_container_width=True)
