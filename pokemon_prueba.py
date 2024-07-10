@@ -30,7 +30,7 @@ result = cur.fetchall()
 df = pd.DataFrame (result, columns=['Pokemon', 'Tipo de Pokemon', 'Generacion', 'Cantidad minima de experiencia','Base', 'Puntos de Base'])
 
 fig = px.bar(df, x="Generacion", y="Puntos de Base", color="Pokemon", 
-             color_discrete_map={'drifblim': '#948988', 'wailord': '#058BD2', 'chansey': '#D9E125', 'blissey': '#D9E125'}, 
+             color_discrete_map={'drifblim': '#2A80C3', 'wailord': '#4BABF5', 'chansey': '#95D0FE', 'blissey': '#9FC6E5'}, 
              barmode="stack")
 
 st.dataframe(df)
