@@ -9,6 +9,8 @@ import os
 #cagar columnas 
 st.set_page_config (page_title= "Pokemon.app", layout= "wide")
 
+st.title("Análisis Estadístico de Pokémon desde la Generación I, II, III, IV")
+
 
 #Pregunta 1
 with st.container():
