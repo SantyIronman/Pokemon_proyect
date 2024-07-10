@@ -13,7 +13,7 @@ st.set_page_config (page_title= "Pokemon.app", layout= "wide")
 #Pregunta 1
 with st.container():
     st.write ("---")
-    st.header ("1.	¿Cuáles han sido los mejores pokemones en cada generación según sus puntos de base?")
+    st.header ("1.	¿Cuáles han sido los Mejores Pokemones en cada Generación según sus Puntos de Base?")
 
 
 # Conectar bbdd 
@@ -212,3 +212,45 @@ fig = px.bar(df_special_attack, x="Pokemon", y="Puntos de Base", color="Generaci
 st.dataframe(df_special_attack, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
+
+# Pregunta 2
+with st.container():
+    st.write("---")
+    st.header("2. ¿Cuál es el Tipo de Pokémon con Mayor Experiencia de Pelea?")
+
+try:
+    conn = sqlite3.connect(db_abs_path)
+    cur = conn.cursor()
+    cur.execute("""
+                SELECT type, identifier, base_experience, color, weight, height, generation
+                FROM (
+                    SELECT type, identifier, base_experience, color, weight, height, generation,
+                    ROW_NUMBER() OVER (PARTITION BY type ORDER BY base_experience DESC) AS rank
+                    FROM limpia_bbdd
+                    WHERE generation BETWEEN 'generation-i' AND 'generation-iv'
+                    ) AS subquery
+                    WHERE rank = 1;
+                """)
+    result = cur.fetchall()  
+except sqlite3.Error as e:
+    print(f"Error: {e}")
+    st.error(f"Error: {e}")
+finally:
+    conn.close()  
+
+df_tipo_exeriencia = pd.DataFrame(result, columns=['Tipo de Pokemon', 'Pokemon', 'Experiencia', 'Color', 'Peso', 'Altura', 'Generacion'])
+
+fig = px.line(df_tipo_exeriencia, x="Tipo de Pokemon", y="Experiencia", 
+              hover_data=["Generacion", "Tipo de Pokemon", "Pokemon"], 
+              color_discrete_sequence=["#760723"])
+
+st.dataframe(df_tipo_exeriencia, width=1000, hide_index=True)
+
+st.plotly_chart(fig, use_container_width=True)
+
+
+
+
+    
+    
+    
