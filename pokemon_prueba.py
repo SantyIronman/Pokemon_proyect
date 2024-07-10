@@ -3,6 +3,8 @@ import pandas as pd
 import sqlite3
 import plotly.express as px 
 import matplotlib.pyplot as plt
+import urllib.request
+import os
 
 #cagar columnas 
 st.set_page_config (page_title= "Pokemon.app", layout= "wide")
@@ -15,10 +17,20 @@ with st.container():
 
 
 # Conectar bbdd 
-github_url = "https://github.com/SantyIronman/Pokemon_proyect/blob/eba941067654486f8a24090cae426557cd4172cc/veekun-pokedex.sqlite"
-conn = sqlite3.connect(github_url)
+github_url = "https://github.com/SantyIronman/Pokemon_proyect/blob/eba941067654486f8a24090cae426557cd4172cc/veekun-pokedex.sqlite?raw=true"
 
+# Download the SQLite database file from GitHub
+db_path = "veekun-pokedex.sqlite"
+urllib.request.urlretrieve(github_url, db_path)
+
+# Get the absolute path of the downloaded file
+db_abs_path = os.path.abspath(db_path)
+
+# Connect to the SQLite database
+conn = sqlite3.connect(db_abs_path)
 cur = conn.cursor()
+
+
 
 #consulta
 cur.execute ("""
@@ -29,6 +41,8 @@ cur.execute ("""
                 ORDER BY max (base_stat) ASC;
                 """)
 result = cur.fetchall()
+
+conn.close()
 
 df = pd.DataFrame (result, columns=['Pokemon', 'Tipo de Pokemon', 'Generacion', 'Cantidad minima de experiencia','Base', 'Puntos de Base'])
 
