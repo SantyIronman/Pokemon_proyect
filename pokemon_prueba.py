@@ -12,6 +12,8 @@ st.set_page_config (page_title= "Pokemon.app", layout= "wide")
 #Titulo para el proyecto, Planteamiento del Problema, Objetivos, Marco Teorico
 st.title("Análisis Estadístico de Pokémon desde la Generación I - IV")
 
+st.image (r'https://w7.pngwing.com/pngs/881/826/png-transparent-pikachu-ash-ketchum-pokemon-vrste-pikachu-leaf-flower-meme.png', width=400)
+
 st.header ("Planteamiento del Problema")
 
 st.write ("Desde su introducción en 1996, los Pokémon han capturado la imaginación de millones de personas en todo el mundo. A lo largo de las primeras cuatro generaciones de juegos (Generación I a IV), se han introducido cientos de especies diferentes, cada una con características únicas que definen sus habilidades, estadísticas y tipología. Las personas más fanáticas de esta franquicia prefieren la primera generación de Pokémon aun así viendo Pokémon mejores que la primera generación, entonces es necesario realizar un análisis estadístico para proporcionar una comprensión más profunda de la estructura de los Pokémon a lo largo del tiempo.")
@@ -61,8 +63,8 @@ p {
 #Pregunta 1
 with st.container():
     st.write ("---")
-    st.header ("1.	¿Cuáles han sido los Mejores Pokemones en cada Generación según sus Puntos de Base?")
-    st.subheader("Los Pokemones con Mayor Puntos de Salud")
+    st.header ("1.	¿Cuáles han sido los Mejores Pokémon en cada Generación según sus Puntos de Base?")
+    st.subheader("Los Pokémon con Mayor Puntos de Salud")
     
 
 
@@ -113,7 +115,7 @@ st.write ("El Pokémon que tiene Mayor Puntos de Salud es Blissey con 255 puntos
 st.image (r'https://static.pokemonpets.com/images/monsters-images-800-800/8242-Mega-Blissey.webp', width=300)
 
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de velocidad
-st.subheader("Los Pokemones con Mayor Puntos de Velocidad")
+st.subheader("Los Pokémon con Mayor Puntos de Velocidad")
 
 try:
     conn = sqlite3.connect(db_abs_path)
@@ -151,7 +153,7 @@ st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokede
 
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de defensa
 
-st.subheader("Los Pokemones con Mayor Puntos de Defensa")
+st.subheader("Los Pokémon con Mayor Puntos de Defensa")
 
 try:
     conn = sqlite3.connect(db_abs_path)
@@ -189,7 +191,7 @@ st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokede
 
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de ataque
 
-st.subheader("Los Pokemones con Mayor Puntos de Ataque")
+st.subheader("Los Pokémon con Mayor Puntos de Ataque")
 
 try:
     conn = sqlite3.connect(db_abs_path)
@@ -226,7 +228,7 @@ st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokede
 
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de defensa-especial
 
-st.subheader("Los Pokemones con Mayor Puntos de Defensa-Especial")
+st.subheader("Los Pokémon con Mayor Puntos de Defensa-Especial")
 
 try:
     conn = sqlite3.connect(db_abs_path)
@@ -263,7 +265,7 @@ st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokede
 
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de ataque-especial
 
-st.subheader("Los Pokemones con Mayor Puntos de Ataque-Especial")
+st.subheader("Los Pokémon con Mayor Puntos de Ataque-Especial")
 
 try:
     conn = sqlite3.connect(db_abs_path)
@@ -351,7 +353,7 @@ st.plotly_chart(fig, use_container_width=True)
 # Pregunta 3
 with st.container():
     st.write("---")
-    st.header("3.	¿Los Pokemones más pesados tienen Menor Velocidad?")
+    st.header("3.	¿Los Pokémon más pesados tienen Menor Velocidad?")
 
 try:
     conn = sqlite3.connect(db_abs_path)
