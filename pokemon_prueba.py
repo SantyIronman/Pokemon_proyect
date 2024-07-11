@@ -108,7 +108,7 @@ st.dataframe(df, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.write ("El Pokémon que tiene mayor puntos de salud es Blissey con 255 puntos, este Pokémon pertenece a la 2° generación")
+st.write ("El Pokémon que tiene Mayor Puntos de Salud es Blissey con 255 puntos, este Pokémon pertenece a la 2° generación")
 
 st.image (r'https://static.pokemonpets.com/images/monsters-images-800-800/8242-Mega-Blissey.webp', width=300)
 
@@ -144,12 +144,14 @@ st.dataframe(df_speed, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.write("El Pokémon que tiene mayor puntos de velocidad es Ninjask con 160 puntos, este Pokémon pertenece a la 3° generación")
+st.write("El Pokémon que tiene Mayor Puntos de Velocidad es Ninjask con 160 puntos, este Pokémon pertenece a la 3° generación")
 
-st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/292.png', width=300)
+st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/292.png', width=400)
 
 
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de defensa
+
+st.subheader("Los Pokemones con Mayor Puntos de Defensa")
 
 try:
     conn = sqlite3.connect(db_abs_path)
@@ -180,7 +182,14 @@ st.dataframe(df_defense, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
 
+st.write ("El Pokémon que tiene Mayor Puntos de Defensa es Shuckle con 230 puntos, este Pokémon pertenece a la 2° generación")
+
+st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/213.png', width=400)
+
+
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de ataque
+
+st.subheader("Los Pokemones con Mayor Puntos de Ataque")
 
 try:
     conn = sqlite3.connect(db_abs_path)
@@ -211,7 +220,13 @@ st.dataframe(df_attack, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
 
+st.write ("El Pokémon que tiene Mayor Puntos de Ataque es Rampardos con 165 puntos, este Pokémon pertenece a la 4° generación")
+
+st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/409.png', width=400)
+
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de defensa-especial
+
+st.subheader("Los Pokemones con Mayor Puntos de Defensa-Especial")
 
 try:
     conn = sqlite3.connect(db_abs_path)
@@ -242,7 +257,13 @@ st.dataframe(df_special_defense, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
 
+st.write ("El Pokémon que tiene Mayor Puntos de Defensa-Especial es Shuckle con 230 puntos, este Pokémon pertenece a la 2° generación")
+
+st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/213.png', width=400)
+
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de ataque-especial
+
+st.subheader("Los Pokemones con Mayor Puntos de Ataque-Especial")
 
 try:
     conn = sqlite3.connect(db_abs_path)
@@ -272,6 +293,11 @@ fig = px.bar(df_special_attack, x="Pokemon", y="Puntos de Base", color="Generaci
 st.dataframe(df_special_attack, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
+
+st.write ("El Pokémon que tiene Mayor Puntos de Ataque-Especial Mewtwo  con 154 puntos, este Pokémon pertenece a la 1° generación")
+
+st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/150.png', width=400)
+
 
 # Pregunta 2
 with st.container():
