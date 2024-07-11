@@ -1,57 +1,19 @@
-### Readme: Análisis estadístico de Pokémon basado en Base de Datos de Pokémones 
+ ### Análisis estadístico de Pokémon, Generaciones I-IV
 
-#Pokemon_proyect
-
-Este repositorio contiene un análisis estadístico descriptivo de Pokémon basado en una base de datos estructurada en SQL. A continuación, se presentan respuestas a preguntas específicas sobre diversas variables presentes en la base de datos
-
-### Estructura del Proyecto
-
-1. **Base de Datos**: 
-   - La base de datos veekun-pokedex.sql contiene las tablas necesarias para almacenar información relevante sobre Pokémon, incluyendo sus estadísticas base como ataque, defensa, velocidad y nivel de salud.
-
-2. **Análisis por Generación**:
-   - Se realizó un análisis exhaustivo para determinar los mejores Pokémon en las primeras 4 generaciones basándose en sus puntos base. Los resultados se presentan detalladamente en los archivos correspondientes.
-
-3. **Relación entre Estadísticas**:
-   - Se exploró la relación entre el ataque y la defensa, así como entre la velocidad y el nivel de salud, por las 4 primeras generaciones de Pokémon. Estos análisis ayudan a entender qué combinaciones de estadísticas hacen que un Pokémon sea más efectivo en batalla.
-
-### Preguntas Analizadas
-
-#### 1. Mejores Pokémon por Generación (4 primeras) según Puntos Base
-   - Se identificaron los Pokémon con los puntos base más altos en cada generación, utilizando consultas SQL para extraer y analizar esta información.
-
-#### 2. Relación entre Velocidad y Nivel de Salud por Generación (4 primeras)
-   - Se exploró cómo la velocidad y el nivel de salud de los Pokémon están relacionados en cada generación, evaluando si estas estadísticas juegan un papel crucial en la efectividad de un Pokémon en combate.
-
-### Uso del Repositorio
-
-- **Clonación**: Puedes clonar este repositorio para acceder a la base de datos y los scripts utilizados en el análisis.
-
-### Contribuciones
-
-Siéntase libre de contribuir a este repositorio agregando nuevas consultas SQL, análisis estadísticos adicionales, o mejorando la documentación existente para hacerla más completa y comprensible.
-
-### Requisitos
-
-- Se requiere un servidor de base de datos SQL  como sqlite para ejecutar las consultas incluidas en este repositorio.
-
-### Autor
-
-Este proyecto fue desarrollado por el grupo de recuperación de computación II como parte de un estudio estadístico de análisis de datos de Pokémon.
-
-### Licencia
-
-Este repositorio está bajo libre licencia
-
----
-
-
-
-#Planteamiento del Problema
+Planteamiento del Problema
 
 Desde su introducción en 1996, los Pokémon han capturado la imaginación de millones de personas en todo el mundo. A lo largo de las primeras cuatro generaciones de juegos (Generación I a IV), se han introducido cientos de especies diferentes, cada una con características únicas que definen sus habilidades, estadísticas y tipología. Las personas más fanáticas de esta franquicia prefieren la primera generación de Pokémon aun así viendo Pokémon mejores que la primera generación, entonces es necesario realizar un análisis estadístico para proporcionar una comprensión más profunda de la estructura de los Pokémon a lo largo del tiempo.
 
-###Marco Teórico
+Objetivos
+
+• Determinar el Pokémon con mayor estadística para cada base: salud, velocidad, defensa, ataque, defensa especial, ataque especial.
+
+• Identificar el Pokémon con mayor experiencia de pelea.
+
+• Determinar si el peso del Pokémon lleva a que el Pokémon tengan menor velocidad al momento de pelear.
+
+
+Marco Teórico
 
 Pokémon = Una contracción del japonés Poketto Monsutā, que significa monstruo de bolsillo.
 
@@ -68,26 +30,51 @@ Cada pokémon cuenta con habilidades especiales iguales o diferentes a otros pok
 Existen 18 tipos de pokemon y cada pokemon puede ser de uno o dos tipos (Ej: Solo tierra o tierra y eléctrico)
 
 • Normal.
+
 • Lucha.
+
 • Volador.
+
 • Veneno.
+
 • Tierra.
+
 • Piedra.
+
 • Bicho.
+
 • Fantasma.
+
 • Acero.
+
 • Fuego.
+
 • Agua.
+
 • Planta.
+
 • Eléctrico.
+
 • Psíquico.
+
 • Hielo.
+
 • Dragón.
+
 • Oscuro.
+
 • Hada.
 
 En el universo de Pokémon existen 6 Generaciones: 1° Generación de 1996 con 151 Pokémon; 2° Generación de 1999 con 100 Pokémon; 3° Generación de 2002 con 135 Pokémon; 4° Generación de 2006 con 108 Pokémon; 5° Generación de 2010 con 156 Pokémon; 6° Generación de 2013 con 72 Pokémon.
 
+Más información en: https://pokemonproyect-2xn4xqjn2d3aeigvgpwqhr.streamlit.app/ 
 
+Colaboradores:
 
-Este README proporciona una visión general del proyecto, detallando el contenido disponible y cómo puede ser utilizado para analizar datos de Pokémon.
+Santiago Simancas
+
+Nalieth Silva
+
+Willy Carrillo
+
+Ándres Morales
