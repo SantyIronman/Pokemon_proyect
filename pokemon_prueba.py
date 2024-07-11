@@ -306,6 +306,7 @@ with st.container():
     st.write("---")
     st.header("2. ¿Cuál es el Tipo de Pokémon con Mayor Experiencia de Pelea?")
 
+
 try:
     conn = sqlite3.connect(db_abs_path)
     cur = conn.cursor()
@@ -350,6 +351,12 @@ st.dataframe(df_tipo_experiencia, width=1000, hide_index=True)
 
 st.plotly_chart(fig, use_container_width=True)
 
+st.write ("El Pokémon que tiene Mayor Experiencia es Blissey con 608 puntos, este Pokémon pertenece a la 2° generación")
+
+st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/242.png', width=400)
+
+
+
 # Pregunta 3
 with st.container():
     st.write("---")
@@ -383,6 +390,11 @@ fig = px.bar(df_peso_velocidad.assign(Puntos_de_Base_str=df_peso_velocidad["Punt
 st.dataframe(df_peso_velocidad, width=1000, hide_index=True)
 
 st.plotly_chart(fig, use_container_width=True)
+
+st.write ("El Pokémon que tiene Mayor Peso y Menor Velocidad es Munchlax con 105 Kilos y 5 Puntos de Velocidad, este Pokémon pertenece a la 4° generación")
+
+st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/446.png', width=400)
+
 
 
 
