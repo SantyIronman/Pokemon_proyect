@@ -110,7 +110,7 @@ st.dataframe(df, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.write ("El Pokémon que tiene Mayor Puntos de Salud es Blissey con 255 puntos, este Pokémon pertenece a la 2° generación")
+st.write ("El Pokémon que tiene Mayor Puntos de Salud es Blissey con 255 puntos, este Pokémon pertenece a la II Generación")
 
 st.image (r'https://static.pokemonpets.com/images/monsters-images-800-800/8242-Mega-Blissey.webp', width=300)
 
@@ -146,7 +146,7 @@ st.dataframe(df_speed, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.write("El Pokémon que tiene Mayor Puntos de Velocidad es Ninjask con 160 puntos, este Pokémon pertenece a la 3° generación")
+st.write("El Pokémon que tiene Mayor Puntos de Velocidad es Ninjask con 160 puntos, este Pokémon pertenece a la III Generación")
 
 st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/292.png', width=400)
 
@@ -184,7 +184,7 @@ st.dataframe(df_defense, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.write ("El Pokémon que tiene Mayor Puntos de Defensa es Shuckle con 230 puntos, este Pokémon pertenece a la 2° generación")
+st.write ("El Pokémon que tiene Mayor Puntos de Defensa es Shuckle con 230 puntos, este Pokémon pertenece a la II Generación")
 
 st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/213.png', width=400)
 
@@ -222,7 +222,7 @@ st.dataframe(df_attack, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.write ("El Pokémon que tiene Mayor Puntos de Ataque es Rampardos con 165 puntos, este Pokémon pertenece a la 4° generación")
+st.write ("El Pokémon que tiene Mayor Puntos de Ataque es Rampardos con 165 puntos, este Pokémon pertenece a la IV Generación")
 
 st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/409.png', width=400)
 
@@ -259,7 +259,7 @@ st.dataframe(df_special_defense, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.write ("El Pokémon que tiene Mayor Puntos de Defensa-Especial es Shuckle con 230 puntos, este Pokémon pertenece a la 2° generación")
+st.write ("El Pokémon que tiene Mayor Puntos de Defensa-Especial es Shuckle con 230 puntos, este Pokémon pertenece a la II Generación")
 
 st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/213.png', width=400)
 
@@ -296,7 +296,7 @@ st.dataframe(df_special_attack, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.write ("El Pokémon que tiene Mayor Puntos de Ataque-Especial Mewtwo  con 154 puntos, este Pokémon pertenece a la 1° generación")
+st.write ("El Pokémon que tiene Mayor Puntos de Ataque-Especial Mewtwo  con 154 puntos, este Pokémon pertenece a la I Generación")
 
 st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/150.png', width=400)
 
@@ -351,7 +351,7 @@ st.dataframe(df_tipo_experiencia, width=1000, hide_index=True)
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.write ("El Pokémon que tiene Mayor Experiencia es Blissey con 608 puntos, este Pokémon pertenece a la 2° generación")
+st.write ("El Pokémon que tiene Mayor Experiencia es Blissey con 608 puntos, este Pokémon pertenece a la II Generación")
 
 st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/242.png', width=400)
 
@@ -391,11 +391,34 @@ st.dataframe(df_peso_velocidad, width=1000, hide_index=True)
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.write ("El Pokémon que tiene Mayor Peso y Menor Velocidad es Munchlax con 105 Kilos y 5 Puntos de Velocidad, este Pokémon pertenece a la 4° generación")
+st.write ("El Pokémon que tiene Mayor Peso y Menor Velocidad es Munchlax con 105 Kilos y 5 Puntos de Velocidad, este Pokémon pertenece a la IV Generación")
 
 st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/446.png', width=400)
 
+# conclusion
 
+st.header("Conclusión")
+
+st.write("Se concluye que la I Generación es la más querida debido a la popularidad que adaptó, pero existen Pokémon que son más eficiente que la I Generación, se evidencia los casos como Blissey; Ninjask; Shuckle; Rampardos que son Pokémon que no pertenecen a la I Generación, pero sus estadísticas son mayores. Se determina que el Pokémon con mayor experiencia de pelea es Blissey siendo un Pokémon de tipo normal perteneciente a la II Generación. Para finalizar se visualiza que mientras más peso tenga el Pokémon más lento será a la hora de combatir, es el caso de Munchlax que es el Pokémon más pesado entre la Generación I-IV.")
+
+#Bibliografia
+
+st.header("Bibliografía")
+
+st.write("""
+         <style>
+p {
+  text-align: justify;
+}
+</style>
+<ul>
+    <li>https://www.pokemon.com/es/pokedex/munchlax
+    <li>https://www.wikidex.net/wiki/Tipo
+    <li>https://pokemon.fandom.com/es/wiki/Experiencia_base
+    <li>https://www.mundodeportivo.com/alfabeta/pokemon/pokemon-las-7-generaciones-clasificadas-de-peor-a-mejor-por-los-usuarios-n-76554
+</ul>
+
+""", unsafe_allow_html=True)
 
 
 
