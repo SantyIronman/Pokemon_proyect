@@ -110,17 +110,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.write ("El Pokémon que tiene mayor puntos de salud es Blissey con 255 puntos, este Pokémon pertenece a la 2° generación")
 
-st.markdown(
-    f"""
-    <style>
-    .stApp {{
-        background: url("https://static.pokemonpets.com/images/monsters-images-800-800/8242-Mega-Blissey.web");
-        background-size: cover;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+st.image (r'https://static.pokemonpets.com/images/monsters-images-800-800/8242-Mega-Blissey.webp')
 
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de velocidad
 
