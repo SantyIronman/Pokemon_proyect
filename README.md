@@ -4,6 +4,16 @@
 
 Este repositorio contiene un análisis estadístico descriptivo de Pokémon basado en una base de datos estructurada en SQL. A continuación, se presentan respuestas a preguntas específicas sobre diversas variables presentes en la base de datos
 
+### Estructura del Proyecto
+
+1. **Base de Datos**: 
+   - La base de datos veekun-pokedex.sql contiene las tablas necesarias para almacenar información relevante sobre Pokémon, incluyendo sus estadísticas base como ataque, defensa, velocidad y nivel de salud.
+
+2. **Análisis por Generación**:
+   - Se realizó un análisis exhaustivo para determinar los mejores Pokémon en las primeras 4 generaciones basándose en sus puntos base. Los resultados se presentan detalladamente en los archivos correspondientes.
+
+3. **Relación entre Estadísticas**:
+   - Se exploró la relación entre el ataque y la defensa, así como entre la velocidad y el nivel de salud, por las 4 primeras generaciones de Pokémon. Estos análisis ayudan a entender qué combinaciones de estadísticas hacen que un Pokémon sea más efectivo en batalla.
 
 ### Requisitos
 
