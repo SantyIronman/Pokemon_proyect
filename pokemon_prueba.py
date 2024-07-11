@@ -38,24 +38,24 @@ p {
 <p>Cada pokémon cuenta con habilidades especiales iguales o diferentes a otros pokémon, para la cuarta generación hay más de 120 diferentes habilidades.</p>
 <p>Existen 18 tipos y cada pokemon puede ser de uno o dos tipos (Ej: Solo tierra o tierra y eléctrico)</p>
 <ul>
-    <li>•	Normal.</li>
-    <li>•	Lucha. </li>
-    <li>•	Volador.</li>
-    <li>•	Veneno.</li>
-    <li>•	Tierra.</li>
-    <li>•	Piedra.</li>
-    <li>•	Bicho.</li>
-    <li>•	Fantasma.</li>
-    <li>•	Acero.</li>
-    <li>•	Fuego.</li>
-    <li>•	Agua.</li>
-    <li>•	Planta.</li>
-    <li>•	Eléctrico.</li>
-    <li>•	Psíquico.</li>
-    <li>•	Hielo.</li>
-    <li>•	Dragón.</li>
-    <li>•	Oscuro.</li>
-    <li>•	Hada.</li>
+    <li>•	Normal = Normal.</li>
+    <li>•	Lucha = Struggle. </li>
+    <li>•	Volador = Flying.</li>
+    <li>•	Veneno = Poisson.</li>
+    <li>•	Tierra = Land.</li>
+    <li>•	Piedra = Rock.</li>
+    <li>•	Bicho = Bug.</li>
+    <li>•	Fantasma = Ghost.</li>
+    <li>•	Acero = Steel.</li>
+    <li>•	Fuego = Fire.</li>
+    <li>•	Agua = Water.</li>
+    <li>•	Planta = Plant.</li>
+    <li>•	Eléctrico = Electric.</li>
+    <li>•	Psíquico = Psychic.</li>
+    <li>•	Hielo = Ice.</li>
+    <li>•	Dragón = Dragon.</li>
+    <li>•	Oscuro = Dark.</li>
+    <li>•	Hada = Fairy.</li>
 </ul>
 <p>En el universo de Pokémon existen 6 Generaciones: 1° Generación de 1996 con 151 Pokémon; 2° Generación de 1999 con 100 Pokémon; 3° Generación de 2002 con 135 Pokémon; 4° Generación de 2006 con 108 Pokémon; 5° Generación de 2010 con 156 Pokémon; 6° Generación de 2013 con 72 Pokémon.</p>
 """, unsafe_allow_html=True)
