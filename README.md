@@ -23,6 +23,14 @@ Este repositorio contiene un análisis estadístico descriptivo de Pokémon basa
 #### 2. Relación entre Velocidad y Nivel de Salud por Generación (4 primeras)
    - Se exploró cómo la velocidad y el nivel de salud de los Pokémon están relacionados en cada generación, evaluando si estas estadísticas juegan un papel crucial en la efectividad de un Pokémon en combate.
 
+### Uso del Repositorio
+
+- **Clonación**: Puedes clonar este repositorio para acceder a la base de datos y los scripts utilizados en el análisis.
+
+### Contribuciones
+
+Siéntase libre de contribuir a este repositorio agregando nuevas consultas SQL, análisis estadísticos adicionales, o mejorando la documentación existente para hacerla más completa y comprensible.
+
 ### Requisitos
 
 - Se requiere un servidor de base de datos SQL  como sqlite para ejecutar las consultas incluidas en este repositorio.
