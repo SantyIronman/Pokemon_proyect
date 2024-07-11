@@ -16,7 +16,7 @@ st.header ("Planteamiento del Problema")
 
 st.write ("Desde su introducción en 1996, los Pokémon han capturado la imaginación de millones de personas en todo el mundo. A lo largo de las primeras cuatro generaciones de juegos (Generación I a IV), se han introducido cientos de especies diferentes, cada una con características únicas que definen sus habilidades, estadísticas y tipología. Las personas más fanáticas de esta franquicia prefieren la primera generación de Pokémon aun así viendo Pokémon mejores que la primera generación, entonces es necesario realizar un análisis estadístico para proporcionar una comprensión más profunda de la estructura de los Pokémon a lo largo del tiempo.")
 
-st.header ("Objetivo")
+st.header ("Objetivos")
 
 st.write ('<ul><li>Determinar el Pokémon con mayor estadística para cada base: salud, velocidad, defensa, ataque, defensa especial, ataque especial.</li><li>Identificar el Pokémon con mayor experiencia de pelea.</li><li>Determinar si el peso del Pokémon lleva a que el Pokémon tengan menor velocidad al momento de pelear.</li></ul', unsafe_allow_html= True)
 
@@ -113,6 +113,7 @@ st.write ("El Pokémon que tiene mayor puntos de salud es Blissey con 255 puntos
 st.image (r'https://static.pokemonpets.com/images/monsters-images-800-800/8242-Mega-Blissey.webp', width=300)
 
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de velocidad
+st.subheader("Los Pokemones con Mayor Puntos de Velocidad")
 
 try:
     conn = sqlite3.connect(db_abs_path)
@@ -142,6 +143,11 @@ fig = px.bar(df_speed, x="Pokemon", y="Puntos de Base", color="Generacion",
 st.dataframe(df_speed, width= 1000, hide_index= True)
 
 st.plotly_chart(fig, use_container_width=True)
+
+st.write("El Pokémon que tiene mayor puntos de velocidad es Ninjask con 160 puntos, este Pokémon pertenece a la 3° generación")
+
+st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/292.png', width=300)
+
 
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de defensa
 
