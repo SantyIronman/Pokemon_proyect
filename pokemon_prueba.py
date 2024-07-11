@@ -12,7 +12,7 @@ st.set_page_config (page_title= "Pokemon.app", layout= "wide")
 #Titulo para el proyecto, Planteamiento del Problema, Objetivos, Marco Teorico
 st.title("Análisis Estadístico de Pokémon desde la Generación I - IV")
 
-st.image (r'https://i.pinimg.com/736x/bc/cd/65/bccd657eb217b5a942c7f81188c6b4b7.jpg', width=400)
+st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/025.png', width=400)
 
 st.header ("Planteamiento del Problema")
 
