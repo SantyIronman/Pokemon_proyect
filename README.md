@@ -1,15 +1,31 @@
-# Pokemon_proyect
-Planteamiento del Problema
+### Readme: Análisis estadístico de Pokémon basado en Base de Datos de Pokémones 
+
+#Pokemon_proyect
+
+Este repositorio contiene un análisis estadístico descriptivo de Pokémon basado en una base de datos estructurada en SQL. A continuación, se presentan respuestas a preguntas específicas sobre diversas variables presentes en la base de datos
+
+
+### Requisitos
+
+- Se requiere un servidor de base de datos SQL  como sqlite para ejecutar las consultas incluidas en este repositorio.
+
+### Autor
+
+Este proyecto fue desarrollado por el grupo de recuperación de computación II como parte de un estudio estadístico de análisis de datos de Pokémon.
+
+### Licencia
+
+Este repositorio está bajo libre licencia
+
+---
+
+
+
+#Planteamiento del Problema
 
 Desde su introducción en 1996, los Pokémon han capturado la imaginación de millones de personas en todo el mundo. A lo largo de las primeras cuatro generaciones de juegos (Generación I a IV), se han introducido cientos de especies diferentes, cada una con características únicas que definen sus habilidades, estadísticas y tipología. Las personas más fanáticas de esta franquicia prefieren la primera generación de Pokémon aun así viendo Pokémon mejores que la primera generación, entonces es necesario realizar un análisis estadístico para proporcionar una comprensión más profunda de la estructura de los Pokémon a lo largo del tiempo.
 
-Objetivos
-
-• Determinar el Pokémon con mayor estadística para cada base: salud, velocidad, defensa, ataque, defensa especial, ataque especial.
-• Identificar el Pokémon con mayor experiencia de pelea.
-• Determinar si el peso del Pokémon lleva a que el Pokémon tengan menor velocidad al momento de pelear.
-
-Marco Teórico
+###Marco Teórico
 
 Pokémon = Una contracción del japonés Poketto Monsutā, que significa monstruo de bolsillo.
 
@@ -45,3 +61,7 @@ Existen 18 tipos de pokemon y cada pokemon puede ser de uno o dos tipos (Ej: Sol
 • Hada.
 
 En el universo de Pokémon existen 6 Generaciones: 1° Generación de 1996 con 151 Pokémon; 2° Generación de 1999 con 100 Pokémon; 3° Generación de 2002 con 135 Pokémon; 4° Generación de 2006 con 108 Pokémon; 5° Generación de 2010 con 156 Pokémon; 6° Generación de 2013 con 72 Pokémon.
+
+
+
+Este README proporciona una visión general del proyecto, detallando el contenido disponible y cómo puede ser utilizado para analizar datos de Pokémon.
