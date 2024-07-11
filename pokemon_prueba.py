@@ -310,14 +310,14 @@ try:
     conn = sqlite3.connect(db_abs_path)
     cur = conn.cursor()
     cur.execute("""
-                SELECT type, identifier, base_experience, color, weight, height, generation
+                SELECT type, identifier, base_experience, color, weight / 10 AS weight_divided, height / 10 AS height_divided, generation
                 FROM (
-                    SELECT type, identifier, base_experience, color, weight, height, generation,
-                    ROW_NUMBER() OVER (PARTITION BY type ORDER BY base_experience DESC) AS rank
+                    SELECT type, identifier, base_experience, color, weight, height, generation,ROW_NUMBER() OVER (PARTITION BY type ORDER BY base_experience DESC) AS rank
                     FROM limpia_bbdd
                     WHERE generation BETWEEN 'generation-i' AND 'generation-iv'
                     ) AS subquery
-                    WHERE rank = 1;
+                    WHERE 
+                    rank = 1;
                 """)
     result = cur.fetchall()  
 except sqlite3.Error as e:
