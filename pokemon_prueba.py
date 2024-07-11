@@ -355,11 +355,12 @@ with st.container():
     st.write("---")
     st.header("3.	¿Los Pokémon más pesados tienen Menor Velocidad?")
 
+
 try:
     conn = sqlite3.connect(db_abs_path)
     cur = conn.cursor()
     cur.execute("""
-                SELECT identifier, type, generation, weight, Puntos_de_base, base_stat
+                SELECT identifier, type, generation, weight / 10 AS weight_divided, Puntos_de_base, base_stat
                 FROM limpia_bbdd
                 WHERE generation BETWEEN 'generation-i' AND 'generation-iv' AND stat_id = "6"
                 ORDER BY base_stat, weight DESC
