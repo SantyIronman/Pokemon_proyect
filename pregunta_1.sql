@@ -1,4 +1,4 @@
---¿Cuáles son los promedios de los pokemones según sus puntos bases en cada una de sus generaciones?
+--¿Cuál es el promedio, valor minimo, valor maximo en punto base de los Pokemon segun su generacion?
 CREATE VIEW Pregunta_1 AS
 SELECT
 	generations.identifier AS "Generaciones",
