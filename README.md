@@ -15,6 +15,14 @@ Este repositorio contiene un análisis estadístico descriptivo de Pokémon basa
 3. **Relación entre Estadísticas**:
    - Se exploró la relación entre el ataque y la defensa, así como entre la velocidad y el nivel de salud, por las 4 primeras generaciones de Pokémon. Estos análisis ayudan a entender qué combinaciones de estadísticas hacen que un Pokémon sea más efectivo en batalla.
 
+### Preguntas Analizadas
+
+#### 1. Mejores Pokémon por Generación (4 primeras) según Puntos Base
+   - Se identificaron los Pokémon con los puntos base más altos en cada generación, utilizando consultas SQL para extraer y analizar esta información.
+
+#### 2. Relación entre Velocidad y Nivel de Salud por Generación (4 primeras)
+   - Se exploró cómo la velocidad y el nivel de salud de los Pokémon están relacionados en cada generación, evaluando si estas estadísticas juegan un papel crucial en la efectividad de un Pokémon en combate.
+
 ### Requisitos
 
 - Se requiere un servidor de base de datos SQL  como sqlite para ejecutar las consultas incluidas en este repositorio.
