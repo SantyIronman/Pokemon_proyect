@@ -224,7 +224,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.write ("El Pokémon que tiene Mayor Puntos de Ataque es Rampardos con 165 puntos, este Pokémon pertenece a la 4° generación")
 
-st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/409.png', width=400)
+st.image (r'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/025.png', width=400)
 
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de defensa-especial
 
