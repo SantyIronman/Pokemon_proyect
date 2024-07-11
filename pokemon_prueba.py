@@ -22,7 +22,7 @@ st.write ('<ul><li>Determinar el Pokémon con mayor estadística para cada base:
 
 st.header ("Marco Teórico")
 
-st.write (""""
+st.write ("""
 <style>
 p {
   text-align: justify;
@@ -62,6 +62,7 @@ p {
 with st.container():
     st.write ("---")
     st.header ("1.	¿Cuáles han sido los Mejores Pokemones en cada Generación según sus Puntos de Base?")
+    st.subheader("Los Pokemones con Mayor Puntos de Salud")
     
 
 
@@ -106,6 +107,20 @@ st.dataframe(df, width= 1000, hide_index= True)
 
 
 st.plotly_chart(fig, use_container_width=True)
+
+st.write ("El Pokémon que tiene mayor puntos de salud es Blissey con 255 puntos, este Pokémon pertenece a la 2° generación")
+
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background: url("https://static.pokemonpets.com/images/monsters-images-800-800/8242-Mega-Blissey.web");
+        background-size: cover;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 #consulta, dataframe y grafico que determina los mejores pokemones segun sus puntos de velocidad
 
